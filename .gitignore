@@ -1,5 +1,19 @@
-*.class
-*.log
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
 
 # sbt specific
 .cache/
@@ -11,7 +25,3 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
-
-# Scala-IDE specific
-.scala_dependencies
-.worksheet
