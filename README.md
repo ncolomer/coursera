@@ -1,4 +1,4 @@
-coursera
+Coursera
 ========
 
 Coursera assignments
