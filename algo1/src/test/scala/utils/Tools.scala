@@ -16,18 +16,30 @@ object Tools {
     }).toMap
   }
 
-  def loadArray(filename: String): Array[Int] = {
+  def loadIntArray(filename: String): Array[Int] = {
     val source = Source.fromURL(getClass.getClassLoader.getResource(filename))
     source.getLines().map(_.toInt).toArray
   }
 
+  def loadLongArray(filename: String): Array[Long] = {
+    val source = Source.fromURL(getClass.getClassLoader.getResource(filename))
+    source.getLines().map(_.trim.toLong).toArray
+  }
+
   def loadIndexedSeq(filename: String): Seq[Int] = {
-    loadArray(filename).toIndexedSeq
+    loadIntArray(filename).toIndexedSeq
   }
 
   def time[A](a: => A): (A, Long) = {
     val now = System.nanoTime
     (a, (System.nanoTime - now) / 1000)
+  }
+
+  def printTime[A](m: String = "Took")(f: => A): A = {
+    val now = System.nanoTime
+    val result = f
+    println("%s - took %sms".format(m, (System.nanoTime - now) / 10e6))
+    result
   }
 
 }

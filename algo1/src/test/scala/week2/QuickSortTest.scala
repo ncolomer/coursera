@@ -74,7 +74,7 @@ class QuickSortTest extends FunSuite {
   test("Sort assignment with first element pivot picker") {
     new SampleData {
       // Given
-      val actual = loadArray("week2/QuickSort.txt")
+      val actual = loadIntArray("week2/QuickSort.txt")
       val picker = (array: Array[Int]) => 0
       // When
       val comparisons = sort(picker)(actual)
@@ -87,7 +87,7 @@ class QuickSortTest extends FunSuite {
   test("Sort assignment with last element pivot picker") {
     new SampleData {
       // Given
-      val actual = loadArray("week2/QuickSort.txt")
+      val actual = loadIntArray("week2/QuickSort.txt")
       val picker = (array: Array[Int]) => array.length - 1
       // When
       val comparisons = sort(picker)(actual)
@@ -161,7 +161,7 @@ class QuickSortTest extends FunSuite {
   test("Sort assignment with median-of-three pivot picker") {
     new SampleData {
       // Given
-      val actual = loadArray("week2/QuickSort.txt")
+      val actual = loadIntArray("week2/QuickSort.txt")
       val picker = medianOfThreePicker
       // When
       val comparisons = sort(picker)(actual)

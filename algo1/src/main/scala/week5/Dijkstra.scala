@@ -50,9 +50,8 @@ object Dijkstra {
     }
     def shortestPath3(from: Int): Map[Int, Int] = {
       case class Elem(item: Int, priority: Int)
-      type MinHeap = PriorityQueue[Elem] (Ordering.by[Elem, Int](_.priority))
-      type MaxHeap = PriorityQueue[Elem] (Ordering.by[Elem, Int](_.priority).reverse)
-      val heap = new MinHeap
+      //type MinHeap = PriorityQueue[Elem](Ordering.by[Elem, Int](_.priority))
+      //type MaxHeap = PriorityQueue[Elem](Ordering.by[Elem, Int](_.priority).reverse)
       Map()
     }
   }

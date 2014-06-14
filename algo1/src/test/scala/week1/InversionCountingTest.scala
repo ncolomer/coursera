@@ -26,7 +26,7 @@ class InversionCountingTest extends FunSuite {
   }
 
   test("Assignment test") {
-    val input = loadArray("week1/IntegerArray.txt")
+    val input = loadIntArray("week1/IntegerArray.txt")
     val (total, timeUs) = time(countInversion(input))
     assert(total == 2407905288l)
     print(input, total, timeUs)
