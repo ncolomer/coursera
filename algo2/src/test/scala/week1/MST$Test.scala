@@ -6,7 +6,7 @@ class MST$Test extends FunSuite {
 
   import week1.MST._
 
-  def sumOfCost(edges: List[Edge]): Int = edges.map{_.cost}.sum
+  def sumOfCost(edges: List[Edge]): Long = edges.map{_.cost.toLong}.sum
 
   test("sample1") {
     // When
