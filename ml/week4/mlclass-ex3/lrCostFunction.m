@@ -41,7 +41,7 @@ h = sigmoid(X * theta);
 a = - y' * log(h);
 b = - (1 - y)' * log(1 - h);
 
-J = 	1 / m * sum(a + b) 		+ lambda / (2 * m) * sum(theta(2:end) .^ 2);;
+J = 	1 / m * sum(a + b) 		+ lambda / (2 * m) * sum(theta(2:end) .^ 2);
 
 grad = 	1 / m * X' * (h - y) 	+ (lambda / m) * [0; theta(2:end)];
 
