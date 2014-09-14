@@ -15,7 +15,7 @@
 log/
 target/
 
-# sbt specific
+# SBT
 .cache/
 .history/
 .lib/
@@ -26,5 +26,11 @@ src_managed/
 project/boot/
 project/plugins/project/
 
-# Coursera specific
+# R
+.RData
+.Rhistory
+
+# Coursera
 ml_login_data.mat
+octave-workspace
+octave-core
